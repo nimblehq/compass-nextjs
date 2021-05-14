@@ -1,0 +1,42 @@
+.message-notice {
+  position: relative;
+  margin: $spacer 0;
+  padding: $spacer 1.25rem $spacer 4.25rem;
+
+  font-size: 0.9rem;
+
+  background: map-get($color-blue, 'light');
+  border-radius: $border-radius;
+
+  &:last-child, p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    width: 2rem;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1.25rem;
+
+    background: image-url('shared/icons/icon-notice.svg') no-repeat 0 center;
+    background-size: 24px;
+  }
+
+  &--info {
+    background: map-get($color-blue, 'light');
+
+    &:before {
+      background: image-url('shared/icons/icon-info.svg') no-repeat 0 center;
+    }
+  }
+
+  &--warning {
+    background: map-get($color-orange, 'light');
+
+    &:before {
+      background: image-url('shared/icons/icon-warning.svg') no-repeat 0 center;
+    }
+  }
+}

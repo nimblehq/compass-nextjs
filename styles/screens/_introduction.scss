@@ -1,0 +1,9 @@
+body.introduction {
+  $areas: 'team', 'product', 'design', 'development';
+
+  @each $area in $areas {
+    .list-block__item--#{$area} .list-block__link:before {
+      background-image: image-url('shared/icons/icon-#{$area}.svg');
+    }
+  }
+}

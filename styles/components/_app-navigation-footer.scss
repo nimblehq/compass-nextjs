@@ -1,0 +1,58 @@
+.app-navigation-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  background-color: map-get($color-brand, 'dark');
+
+  @include media-breakpoint-up('lg') {
+    width: rem(300px);
+  }
+
+  &:before {
+    display: block;
+    content: " ";
+    width: calc(100% - 60px);
+    height: 1px;
+
+    margin-left: rem(30px);
+
+    background-color: hsla(0, 0%, 100%, 0.32);
+  }
+}
+
+.app-navigation-footer__external {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-navigation-footer__external {
+  height: rem(60px);
+
+  padding: 0 rem(50px);
+
+  font-size: $base-font-size;
+  font-weight: bold;
+  cursor: pointer;
+
+  @include media-breakpoint-up('lg') {
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
+
+  > .app-navigation-footer__link--active {
+    color: #fff;
+  }
+
+  .app-navigation-footer__link {
+    &, &:hover {
+      text-decoration: none;
+    }
+
+    &-icon {
+      color: map-get($color-red, 'dark');
+      margin: rem(4px);
+    }
+  }
+}

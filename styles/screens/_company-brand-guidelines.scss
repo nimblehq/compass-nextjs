@@ -1,0 +1,162 @@
+$guideline-color-gray: (
+  100: #f9fbfd,
+  200: #eef2f5,
+  300: #e6e9ed,
+  400: #c3c6ce,
+  500: #9ea1ac,
+  600: #747784,
+  700: #4d505b,
+  800: #4d505b,
+  900: #3b3d47,
+  dark: #15151a,
+  light: #fff
+);
+
+$guideline-color-brand: (
+  dark: #201547
+);
+
+$guideline-color-blue: (
+  moderate: #5739c0
+);
+
+$guideline-color-red: (
+  bright: #ee2737,
+  vivid: #fa4616
+);
+
+$guideline-color-orange: (
+  pure: #ff671f,
+  vivid: #ff8200
+);
+
+$guideline-color-pink: (
+  pure: #e40046
+);
+
+.pallete {
+  margin-bottom: 2rem;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    &:before {
+      width: 100%;
+      height: 124px;
+      display: block;
+      content: '';
+      background-color: transparent;
+      margin-bottom: 16px;
+    }
+  }
+
+  &--color-brand-blue &__list {
+    &:before {
+      background: map-get($guideline-color-brand, 'dark');
+    }
+  }
+
+  &--pink-pure &__list {
+    &:before {
+      background: map-get($guideline-color-pink, 'pure');
+    }
+  }
+
+  &--red-bright &__list {
+    &:before {
+      background: map-get($guideline-color-red, 'bright');
+    }
+  }
+
+  &--red-vivid &__list {
+    &:before {
+      background: map-get($guideline-color-red, 'vivid');
+    }
+  }
+
+  &--orange-vivid &__list {
+    &:before {
+      background: map-get($guideline-color-orange, 'vivid');
+    }
+  }
+
+  &--orange-pure &__list {
+    &:before {
+      background: map-get($guideline-color-orange, 'pure');
+    }
+  }
+
+  &--blue-moderate &__list {
+    &:before {
+      background: map-get($guideline-color-blue, 'moderate');
+    }
+  }
+
+  &--color-gray-100 &__list {
+    &:before {
+      background: map-get($guideline-color-gray, 100);
+    }
+  }
+
+  &--color-gray-200 &__list {
+    &:before {
+      background: map-get($guideline-color-gray, 200);
+    }
+  }
+
+  &--color-gray-300 &__list {
+    &:before {
+      background: map-get($guideline-color-gray, 300);
+    }
+  }
+
+  &--color-gray-400 &__list {
+    &:before {
+      background: map-get($guideline-color-gray, 400);
+    }
+  }
+
+  &--color-gray-500 &__list {
+    &:before {
+      background: map-get($guideline-color-gray, 500);
+    }
+  }
+
+  &--color-gray-600 &__list {
+    &:before {
+      background: map-get($guideline-color-gray, 600);
+    }
+  }
+
+  &--color-gray-700 &__list {
+    &:before {
+      background: map-get($guideline-color-gray, 700);
+    }
+  }
+
+  &--color-gray-800 &__list {
+    &:before {
+      background: map-get($guideline-color-gray, 800);
+    }
+  }
+
+  &--color-gray-900 &__list {
+    &:before {
+      background: map-get($guideline-color-gray, 900);
+    }
+  }
+
+  &--color-gray-dark &__list {
+    &:before {
+      background: map-get($guideline-color-gray, 'dark');
+    }
+  }
+
+  &--color-gray-light &__list {
+    &:before {
+      background: map-get($guideline-color-gray, 'light');
+    }
+  }
+}

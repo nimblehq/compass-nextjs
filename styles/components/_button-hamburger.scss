@@ -1,0 +1,15 @@
+.button-hamburger {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0;
+  cursor: pointer;
+
+  &:hover {
+    color: map-get($color-brand, 'primary');
+  }
+
+  &__icon {
+    width: inherit;
+    height: inherit;
+  }
+}

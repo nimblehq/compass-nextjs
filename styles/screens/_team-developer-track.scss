@@ -1,0 +1,28 @@
+body.team__developer-track {
+  table {
+    th:nth-child(1) {
+      width: 30%;
+    }
+
+    th:nth-child(2) {
+      width: 70%;
+    }
+  }
+
+  .growth-track {
+    margin-bottom: rem(20px);
+  }
+
+  // Allow bottom border to expand to the overflow area on smaller screens
+  .growth-track__navigation {
+    @include media-breakpoint-down('sm') {
+      position: relative;
+    }
+
+    .list-tab {
+      @include media-breakpoint-down('sm') {
+        position: revert;
+      }
+    }
+  }
+}

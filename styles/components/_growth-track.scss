@@ -1,0 +1,171 @@
+.growth-track {
+  border: 1px solid map-get($color-gray, 'light');
+
+  .growth-track__content {
+    padding: 1rem 1rem 0 1rem;
+
+    @include media-breakpoint-up('lg') {
+      padding: 2rem 2rem 0 2rem;
+    }
+  }
+}
+
+.growth-track__level,
+.growth-track__path {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.growth-track__level {
+  min-height: rem(600px);
+
+  .list-tab + .growth-track__path-container {
+    margin-top: 2rem;
+  }
+
+  .growth-track__group-title {
+    font-weight: bold;
+    line-height: 1.5;
+  }
+}
+
+.growth-track__list-meta {
+  display: grid;
+  grid-template-areas: 'salary_title experience_title'
+                       'salary_range experience_requirement';
+
+  line-height: 2.5rem;
+
+  @include media-breakpoint-up(lg) {
+    grid-auto-columns: minmax(max-content, 10%);
+  }
+
+  .growth-track__meta-content:nth-child(2) {
+    grid-area: salary_range;
+  }
+
+  .growth-track__meta-title:nth-child(3) {
+    grid-area: experience_title;
+  }
+
+  .growth-track__meta-content:nth-child(4) {
+    grid-area: experience_requirement;
+  }
+
+  .growth-track__meta-title:nth-child(1),
+  .growth-track__meta-content:nth-child(2) {
+    padding-right: 2.5rem;
+  }
+
+  .growth-track__meta-title:nth-child(3),
+  .growth-track__meta-content:nth-child(4) {
+    padding-left: 2.5rem;
+
+    @include pseudo-border(before, vertical);
+  }
+}
+
+.growth-track__skill-group {
+  margin-top: 2rem;
+
+  .growth-track__skill-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: rem(20px) 0;
+
+    font-weight: 400;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .growth-track__skill-text {
+    padding-right: rem(20px);
+  }
+
+  .growth-track__actionable {
+    flex: 0 0 2rem;
+    padding: 0;
+    position: relative;
+
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .growth-track__actionable-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    color: map-get($color-gray, 'darkest');
+  }
+
+  .growth-track__skill-content {
+    // Title padding + Button width
+    padding: 0 rem(42px) 1rem 0;
+
+    font-size: map-get($font-sizes, 'md');
+
+    border-bottom: 1px solid map-get($color-gray, 'light');
+
+    & > p + ul {
+      margin-top: rem(-8px);
+    }
+
+    & > strong {
+      display: block;
+
+      margin-bottom: rem(8px);
+    }
+
+    & > ul > li {
+      margin-bottom: rem(12px);
+    }
+  }
+
+  // Toggle skill content
+  .growth-track__skill-title {
+    border-bottom: 1px solid map-get($color-gray, 'light');
+
+    .growth-track__actionable-icon--closed {
+      display: block;
+    }
+
+    .growth-track__actionable-icon--expanded {
+      display: none;
+    }
+  }
+
+  .growth-track__skill-title--expanded {
+    border-bottom: none;
+
+    .growth-track__actionable-icon--closed {
+      display: none;
+    }
+
+    .growth-track__actionable-icon--expanded {
+      display: block;
+    }
+  }
+
+  .growth-track__skill-content {
+    display: none;
+  }
+
+  .growth-track__skill-content--expanded {
+    display: block;
+    @include fade-in();
+  }
+
+  // Remove border on the last soft skill since it's the end of the content
+  &--soft .growth-track__skill-title:last-of-type,
+  &--soft .growth-track__skill-content:last-of-type {
+    border-bottom: none;
+  }
+}

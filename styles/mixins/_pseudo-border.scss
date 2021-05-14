@@ -1,0 +1,38 @@
+// Pseudo Border
+// Use a pseudo selector to create line dividers
+
+@mixin pseudo-border(
+  $selector: after,
+  $direction: vertical,
+  $top: 0,
+  $bottom: 0,
+  $left: 0,
+  $zIndex: 1,
+  $color: map-get($color-gray, 'light'),
+  $enable_transition: false
+) {
+  position: relative;
+
+  &:#{$selector} {
+    content: '';
+    position: absolute;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    z-index: $zIndex;
+
+    @if $direction == vertical {
+      height: 100%;
+      width: 1px;
+    } @else {
+      height: 1px;
+      width: 100%;
+    }
+
+    background: $color;
+
+    @if $enable-transition == true {
+      @include fade-in();
+    }
+  }
+}

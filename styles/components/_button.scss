@@ -1,0 +1,38 @@
+.button {
+  @extend .btn;
+  @include transition(background $base-animation-duration);
+
+  display: inline-block;
+  padding: 0.25rem 1rem;
+
+  line-height: 2;
+  font-size: map-get($font-sizes, 'md');
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+
+  border: none;
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+// Theme modifiers
+
+.button.button--primary {
+  $accent-color: map-get($color-red, 'primary');
+
+  color: #fff;
+  background: $accent-color;
+  border-color: $accent-color;
+
+  &:hover,
+  &:focus {
+    background: darken($accent-color, 10%);
+  }
+}

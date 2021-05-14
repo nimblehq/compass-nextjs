@@ -1,0 +1,180 @@
+.layout-default .app-header {
+  width: 100%;
+  height: $app-header-height;
+  position: fixed;
+  z-index: map-get($zIndex, 'higher');
+
+  @include media-breakpoint-up('lg') {
+    display: none;
+  }
+}
+
+.layout-default .app-container {
+  @include media-breakpoint-up('lg') {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: rem(300px) 1fr;
+  }
+
+  &__navigation-container {
+    background: map-get($color-brand, 'dark');
+  }
+
+  &__content-container {
+    @include make-col-ready();
+    @include make-col(12);
+
+    padding-top: calc(#{$app-header-height} + #{$grid-gutter-width / 2});
+    padding-bottom: $grid-gutter-width / 2;
+
+    @include media-breakpoint-up('lg') {
+      padding: $grid-gutter-width ($grid-gutter-width * 1.5);
+    }
+  }
+}
+
+// Swap to:
+// - 2-column layout on lg screens (sidebar content)
+// - 3-column layout on xl screens (sidebar content TOC)
+.layout-default .app-container__content-container {
+  $toc-width: 225px;
+
+  @include media-breakpoint-up('xl') {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr $toc-width;
+    grid-template-rows: min-content auto;
+    grid-template-areas:
+      'hero toc'
+      'content toc'
+      'footer toc'
+    ;
+  }
+
+  .hero,
+  .app-content,
+  .app-footer,
+  .toc {
+    @include media-breakpoint-up('lg') {
+      max-width: 40rem;
+
+      margin: 0 auto;
+    }
+
+    @include media-breakpoint-up('xxl') {
+      max-width: 50rem;
+    }
+  }
+
+  .hero,
+  .app-content,
+  .app-footer {
+    @include media-breakpoint-up('xl') {
+      padding-right: $grid-gutter-width * 1.5;
+      width: 40rem;
+    }
+
+    @include media-breakpoint-up('xxl') {
+      width: 50rem;
+    }
+  }
+
+  .hero {
+    overflow: hidden;
+
+    @include media-breakpoint-up('xl') {
+      grid-area: hero;
+    }
+  }
+
+  .app-content {
+    @include media-breakpoint-up('xl') {
+      grid-area: content;
+    }
+  }
+
+  .app-footer {
+    width: 100%;
+
+    @include media-breakpoint-up('xl') {
+      grid-area: footer;
+    }
+  }
+
+  .toc {
+    @include media-breakpoint-up('xl') {
+      grid-area: toc;
+
+      max-width: initial;
+      margin: initial;
+    }
+  }
+
+  .toc .list-toc {
+    @include media-breakpoint-up('xl') {
+      position: fixed;
+      width: $toc-width;
+    }
+  }
+}
+
+// Mobile navigation
+
+.layout-default .app-container__navigation-container {
+  .app-navigation,
+  .app-navigation-footer {
+    transform: translateY(-100vh);
+    transition: transform $base-animation-duration $base-animation-timing;
+
+    @include media-breakpoint-up('lg') {
+      transform: initial;
+    }
+  }
+
+  .app-navigation {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: map-get($zIndex, 'high');
+
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+
+    overflow-y: auto;
+
+    padding-bottom: rem(60px);
+
+    @include media-breakpoint-up('lg') {
+      position: initial;
+      max-height: initial;
+
+      padding-top: rem(40px);
+    }
+  }
+
+  .app-navigation-footer {
+    z-index: map-get($zIndex, 'high');
+  }
+
+  .button-hamburger {
+    position: fixed;
+    top: 0.875rem;
+    right: $grid-gutter-width/2;
+    z-index: map-get($zIndex, 'highest');
+
+    @include media-breakpoint-up('lg') {
+      display: none;
+    }
+
+    // Hidden input to act as as toggle [checkbox hack]
+    ~ input {
+      display: none;
+    }
+
+    & ~ input:checked ~ .app-navigation,
+    & ~ input:checked ~ .app-navigation-footer {
+      transform: translateY(0);
+    }
+  }
+}

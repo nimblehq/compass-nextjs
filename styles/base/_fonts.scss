@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Neuzeit S';
+  font-weight: 500;
+  src: asset-url('fonts/NeuzeitS-Book.eot'),
+  asset-url('fonts/NeuzeitS-Book.eot?#iefix') format('embedded-opentype'),
+  asset-url('fonts/NeuzeitS-Book.woff2') format('woff2'),
+  asset-url('fonts/NeuzeitS-Book.woff') format('woff'),
+  asset-url('fonts/NeuzeitS-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Neuzeit S';
+  font-weight: bold;
+  src: asset-url('fonts/NeuzeitS-BookHeavy.eot'),
+  asset-url('fonts/NeuzeitS-BookHeavy.eot?#iefix') format('embedded-opentype'),
+  asset-url('fonts/NeuzeitS-BookHeavy.woff2') format('woff2'),
+  asset-url('fonts/NeuzeitS-BookHeavy.woff') format('woff'),
+  asset-url('fonts/NeuzeitS-BookHeavy.ttf') format('truetype');
+}

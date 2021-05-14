@@ -1,0 +1,80 @@
+.list-tab {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+
+  list-style: none;
+
+  // Bottom border placed behind the actionable bottom border
+  // This allows the active actionable to have a bottom border on the same level
+  @include pseudo-border($direction: horizontal, $top: auto, $enable-transition: true);
+
+  &__item {
+    text-align: center;
+  }
+
+  &__actionable {
+    display: block;
+    padding: 0 1rem;
+    line-height: 2rem;
+
+    color: map-get($color-gray, 'darkest');
+    font-weight: bold;
+
+    transition: color $base-animation-duration/2 $base-animation-timing,
+                background $base-animation-duration/2 $base-animation-timing;
+
+    // Reset buttons
+    background: #fff;
+    border: none;
+    outline: none;
+
+    &,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__actionable:active,
+  &__actionable:focus,
+  &__actionable:hover,
+  &__actionable--active {
+    color: map-get($color-brand, 'primary');
+    outline: none;
+  }
+
+  &__actionable--active {
+    @include pseudo-border(
+      $direction: horizontal,
+      $top: auto,
+      $color: map-get($color-brand, 'primary'),
+      $zIndex: map-get($zIndex, 'high'),
+      $enable-transition: true
+    );
+  }
+}
+
+.list-tab--primary {
+  .list-tab__actionable {
+    line-height: rem(56px);
+
+    &--active {
+      background: map-get($color-gray, 'lightest');
+    }
+  }
+}
+
+.list-tab--secondary {
+  .list-tab__actionable {
+    font-size: map-get($font-sizes, 'md');
+    line-height: rem(40px);
+  }
+}
+
+.list-tab--full-width {
+  .list-tab__item {
+    flex: 1 0;
+  }
+}

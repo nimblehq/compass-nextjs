@@ -1,0 +1,20 @@
+.button-toggle {
+  @extend .btn;
+  @extend .btn-link;
+
+  outline: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &__icon {
+    transition: transform $base-animation-duration/2 $base-animation-timing;
+  }
+}
+
+.button-toggle--anchor.button-toggle--expanded {
+  .button-toggle__icon {
+    transform: rotate(180deg);
+  }
+}

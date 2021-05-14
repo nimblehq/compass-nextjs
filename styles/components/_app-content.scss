@@ -1,0 +1,53 @@
+.app-content {
+  padding-bottom: 1.5rem;
+
+  h2,
+  h3 {
+    display: inline-block;
+    position: relative;
+
+    @include media-breakpoint-up('lg') {
+      display: block;
+    }
+
+    .anchor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      z-index: map-get($zIndex, 'high');
+      right: -2rem;
+
+      // Vertical cantering
+      $heading-bottom-margin: 0.5rem;
+      top: calc(50% - #{$heading-bottom-margin/2});
+      transform: translateY(-50%);
+
+      width: 2rem;
+      height: 2rem;
+
+      opacity: 0;
+      transition: opacity $base-animation-duration $base-animation-timing;
+
+      @include media-breakpoint-up('lg') {
+        left: -2rem;
+      }
+    }
+
+    .anchor span {
+      width: 1rem;
+      height: 1rem;
+
+      background: {
+        repeat: no-repeat;
+        image: image-url('shared/icons/icon-anchor.svg');
+        size: cover;
+      }
+    }
+
+    &:hover .anchor {
+      opacity: 1;
+    }
+  }
+}
