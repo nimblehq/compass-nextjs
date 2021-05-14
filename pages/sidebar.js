@@ -12,7 +12,7 @@ export default function Sidebar() {
 
     <nav className="app-navigation" data-controller="app-navigation">
   <div className="logo">
-  <a href="/compass/" className="logo__link link--unstyled">
+  <a href="/" className="logo__link link--unstyled">
     <span className="sr-only">Compass by Nimble</span>
   </a>
 </div>
