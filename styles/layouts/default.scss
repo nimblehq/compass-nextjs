@@ -1,4 +1,4 @@
-.layout-default .app-header {
+.app-header {
   width: 100%;
   height: $app-header-height;
   position: fixed;
@@ -9,7 +9,7 @@
   }
 }
 
-.layout-default .app-container {
+.app-container {
   @include media-breakpoint-up('lg') {
     display: grid;
     height: 100vh;
@@ -36,7 +36,7 @@
 // Swap to:
 // - 2-column layout on lg screens (sidebar content)
 // - 3-column layout on xl screens (sidebar content TOC)
-.layout-default .app-container__content-container {
+.app-container__content-container {
   $toc-width: 225px;
 
   @include media-breakpoint-up('xl') {
@@ -120,7 +120,7 @@
 
 // Mobile navigation
 
-.layout-default .app-container__navigation-container {
+.app-container__navigation-container {
   .app-navigation,
   .app-navigation-footer {
     transform: translateY(-100vh);
