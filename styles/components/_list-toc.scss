@@ -16,7 +16,7 @@
   //
   // Even when a content has no headings, jekyll-toc generates an empty list:
   // ```
-  // <ul class="list-toc">
+  // <ul className="list-toc">
   // </ul>`
   // ```
   // :not:empty selector does not work as jekyll-toc adds a whitespace character

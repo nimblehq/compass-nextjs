@@ -3,30 +3,30 @@
         <style>.cls-2{fill:#534acc}.cls-3,.cls-6{fill:none}.cls-3{stroke:#201547;stroke-miterlimit:10;stroke-width:8px}.cls-4{fill:#30219e}.cls-5{fill:#8383ea}.cls-6{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:4.86px}.cls-7{fill:#cacaff}</style>
     </defs>
     <path fill="#201547" d="M158.09 52.29H317.9v204.55H158.09z"/>
-    <path d="M93.26 92.81h159.81v204.55H93.26z" class="cls-2"/>
-    <path d="M149.87 172.81h94.93M149.87 189.3h94.93M149.87 205.8h47.46" class="cls-3"/>
-    <path d="M188.89 111.45h64.18V152h-64.18a20.26 20.26 0 01-20.26-20.26 20.26 20.26 0 0120.26-20.29z" class="cls-4"/>
-    <rect width="40.52" height="40.52" x="111.32" y="111.45" class="cls-5" rx="20.26"/>
-    <circle cx="253.07" cy="162.05" r="38.15" class="cls-5"/>
-    <path d="M253.07 141.13v41.83M273.98 162.05h-41.83" class="cls-6"/>
-    <path d="M284.46 238.46h114.93v10.24H284.46z" class="cls-2"/>
-    <path d="M352.49 287.94h42.11v10.24h-42.11zM284.46 263.2h60.76v10.24h-60.76z" class="cls-5"/>
-    <path d="M389.39 263.2h38.58v10.24h-38.58z" class="cls-2"/>
-    <path d="M358.38 263.2h17v10.24h-17z" class="cls-4"/>
-    <path d="M284.46 214.72h60.76v10.24h-60.76z" class="cls-5"/>
-    <path d="M358.38 214.72h17v10.24h-17zM438.2 263.2h17v10.24h-17z" class="cls-4"/>
-    <path d="M284.46 287.94h24.08v10.24h-24.08z" class="cls-2"/>
-    <path d="M318.15 287.94h24.08v10.24h-24.08zM404.83 287.94h24.08v10.24h-24.08z" class="cls-4"/>
-    <path d="M5.2 167.21h124.24v77.18H5.2z" class="cls-7"/>
-    <circle cx="13.93" cy="175.94" r="3.06" class="cls-4"/>
-    <circle cx="23.29" cy="175.94" r="3.06" class="cls-2"/>
-    <circle cx="32.65" cy="175.94" r="3.06" class="cls-5"/>
-    <path d="M149.87 228.34H238v52.78h-88.13zM87.69 218.92h41.75v10.24H87.69zM19.65 194.18h60.76v10.24H19.65z" class="cls-5"/>
-    <path d="M93.57 194.18h17v10.24h-17z" class="cls-2"/>
+    <path d="M93.26 92.81h159.81v204.55H93.26z" className="cls-2"/>
+    <path d="M149.87 172.81h94.93M149.87 189.3h94.93M149.87 205.8h47.46" className="cls-3"/>
+    <path d="M188.89 111.45h64.18V152h-64.18a20.26 20.26 0 01-20.26-20.26 20.26 20.26 0 0120.26-20.29z" className="cls-4"/>
+    <rect width="40.52" height="40.52" x="111.32" y="111.45" className="cls-5" rx="20.26"/>
+    <circle cx="253.07" cy="162.05" r="38.15" className="cls-5"/>
+    <path d="M253.07 141.13v41.83M273.98 162.05h-41.83" className="cls-6"/>
+    <path d="M284.46 238.46h114.93v10.24H284.46z" className="cls-2"/>
+    <path d="M352.49 287.94h42.11v10.24h-42.11zM284.46 263.2h60.76v10.24h-60.76z" className="cls-5"/>
+    <path d="M389.39 263.2h38.58v10.24h-38.58z" className="cls-2"/>
+    <path d="M358.38 263.2h17v10.24h-17z" className="cls-4"/>
+    <path d="M284.46 214.72h60.76v10.24h-60.76z" className="cls-5"/>
+    <path d="M358.38 214.72h17v10.24h-17zM438.2 263.2h17v10.24h-17z" className="cls-4"/>
+    <path d="M284.46 287.94h24.08v10.24h-24.08z" className="cls-2"/>
+    <path d="M318.15 287.94h24.08v10.24h-24.08zM404.83 287.94h24.08v10.24h-24.08z" className="cls-4"/>
+    <path d="M5.2 167.21h124.24v77.18H5.2z" className="cls-7"/>
+    <circle cx="13.93" cy="175.94" r="3.06" className="cls-4"/>
+    <circle cx="23.29" cy="175.94" r="3.06" className="cls-2"/>
+    <circle cx="32.65" cy="175.94" r="3.06" className="cls-5"/>
+    <path d="M149.87 228.34H238v52.78h-88.13zM87.69 218.92h41.75v10.24H87.69zM19.65 194.18h60.76v10.24H19.65z" className="cls-5"/>
+    <path d="M93.57 194.18h17v10.24h-17z" className="cls-2"/>
     <path fill="#2222a0" d="M19.65 218.92h24.08v10.24H19.65z"/>
-    <path d="M53.35 218.92h24.08v10.24H53.35z" class="cls-2"/>
-    <path d="M344.27 116.01h61.75v61.75h-61.75z" class="cls-4"/>
-    <circle cx="353.82" cy="125.56" r="3.06" class="cls-2"/>
-    <circle cx="363.18" cy="125.56" r="3.06" class="cls-5"/>
-    <circle cx="372.54" cy="125.56" r="3.06" class="cls-7"/>
+    <path d="M53.35 218.92h24.08v10.24H53.35z" className="cls-2"/>
+    <path d="M344.27 116.01h61.75v61.75h-61.75z" className="cls-4"/>
+    <circle cx="353.82" cy="125.56" r="3.06" className="cls-2"/>
+    <circle cx="363.18" cy="125.56" r="3.06" className="cls-5"/>
+    <circle cx="372.54" cy="125.56" r="3.06" className="cls-7"/>
 </svg>
