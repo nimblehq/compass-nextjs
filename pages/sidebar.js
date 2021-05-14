@@ -458,7 +458,7 @@ export default function Sidebar() {
                     </li>
                     <li className="app-navigation__sub-list-item">
                       <a href="https://nimblehq.co/compass/development/code-conventions/golang/" className="app-navigation__link link--unstyled">
-                        Go
+                        Golang
                       </a>
                     </li>
                     <li className="app-navigation__sub-list-item">

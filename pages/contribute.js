@@ -5,6 +5,10 @@ const Sidebar = dynamic(() => import('./sidebar'))
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>Contribute | Compass by Nimble</title>
+        <meta name="description" content="Compass is a living document guiding our team members to work together and fulfill our mission."></meta>
+      </Head>
       <header class="app-header">
         <div class="logo">
           <a href="https://nimblehq.co/compass/" class="logo__link link--unstyled">
