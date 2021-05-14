@@ -1,10 +1,51 @@
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
 
 const Sidebar = dynamic(() => import('./sidebar'))
 
 export default function Home() {
+     const faqHeader = {
+           "@context": "https://schema.org",
+           "@type": "FAQPage",
+           "mainEntity": [{
+             "@type": "Question",
+             "name": "Why Compass?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "This living document is more than a <strong>code of conduct</strong> or a set of rules but really a guide for all our team members to work together in order to fulfill our mission."
+             }
+           }, {
+             "@type": "Question",
+             "name": "How to contribute?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "We 💙 pull requests. If you have something you want to add or remove, please open a new pull request."
+             }
+           }, {
+             "@type": "Question",
+             "name": "What we look for?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "When it comes to new team members, regardless of the role, we are always looking for specific traits as outlined in our values. Our entire process and all the questions that you will be asked are linked to them. We are looking to see if you and us, stand for the same."
+             }
+           }, {
+             "@type": "Question",
+             "name": "How am I going to apply?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "Head to our career page to see all current openings <a href=https://jobs.nimblehq.co/> Click here </a>"
+             }
+           }]
+         }
+
   return (
     <body className="introduction introduction__compass-introduction">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqHeader) }}
+        />;
+      </Head>
       <div hidden="">
       </div>
       <header className="app-header">
@@ -25,7 +66,7 @@ export default function Home() {
             <ul id="toc" className="list-toc"></ul>
           </div>
           <div className="app-content">
-            <p>We are a <a href="https://nimblehq.co" target="_blank" rel="noreferrer">software development company</a> focused on <a href="https://nimblehq.co/work/" target="_blank" rel="noreferrer">building web and mobile applications</a> for startups and innovative large enterprises. We take a product development approach, creating custom software that people will love to use and empowering our clients to do what they do best - better.</p>
+            <p>We are a <a href="https://nimblehq.co" target="_blank">software development company</a> focused on <a href="https://nimblehq.co/work/" target="_blank">building web and mobile applications</a> for startups and innovative large enterprises. We take a product development approach, creating custom software that people will love to use and empowering our clients to do what they do best - better.</p>
             <p>As an agile and engineering-focused company, we value constant improvements of our processes. Strong with our experience acquired working on very diverse applications and systems, we have developed the methodologies explained in this document.</p>
 
             <hr/>
@@ -66,7 +107,7 @@ export default function Home() {
             <p className="app-footer__subheading">Learn more about our recruitment process and open positions.</p>
           </div>
           <div className="app-footer__cta-action">
-            <a target="_blank" href="https://jobs.nimblehq.co/?source=compass" className="button button--primary" rel="noreferrer">See open positions</a>
+            <a target="_blank" href="https://jobs.nimblehq.co/?source=compass" className="button button--primary">See open positions</a>
           </div>
         </div>
         
