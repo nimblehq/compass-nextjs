@@ -25,7 +25,7 @@ export default function Home() {
             <ul id="toc" className="list-toc"></ul>
           </div>
           <div className="app-content">
-            <p>We are a <a href="https://nimblehq.co" target="_blank">software development company</a> focused on <a href="https://nimblehq.co/work/" target="_blank">building web and mobile applications</a> for startups and innovative large enterprises. We take a product development approach, creating custom software that people will love to use and empowering our clients to do what they do best - better.</p>
+            <p>We are a <a href="https://nimblehq.co" target="_blank" rel="noreferrer">software development company</a> focused on <a href="https://nimblehq.co/work/" target="_blank" rel="noreferrer">building web and mobile applications</a> for startups and innovative large enterprises. We take a product development approach, creating custom software that people will love to use and empowering our clients to do what they do best - better.</p>
             <p>As an agile and engineering-focused company, we value constant improvements of our processes. Strong with our experience acquired working on very diverse applications and systems, we have developed the methodologies explained in this document.</p>
 
             <hr/>
@@ -66,7 +66,7 @@ export default function Home() {
             <p className="app-footer__subheading">Learn more about our recruitment process and open positions.</p>
           </div>
           <div className="app-footer__cta-action">
-            <a target="_blank" href="https://jobs.nimblehq.co/?source=compass" className="button button--primary">See open positions</a>
+            <a target="_blank" href="https://jobs.nimblehq.co/?source=compass" className="button button--primary" rel="noreferrer">See open positions</a>
           </div>
         </div>
         
