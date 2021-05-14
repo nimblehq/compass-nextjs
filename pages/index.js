@@ -1,10 +1,51 @@
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
 
 const Sidebar = dynamic(() => import('./sidebar'))
 
 export default function Home() {
+     const faqHeader = {
+           "@context": "https://schema.org",
+           "@type": "FAQPage",
+           "mainEntity": [{
+             "@type": "Question",
+             "name": "Why Compass?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "This living document is more than a <strong>code of conduct</strong> or a set of rules but really a guide for all our team members to work together in order to fulfill our mission."
+             }
+           }, {
+             "@type": "Question",
+             "name": "How to contribute?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "We 💙 pull requests. If you have something you want to add or remove, please open a new pull request."
+             }
+           }, {
+             "@type": "Question",
+             "name": "What we look for?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "When it comes to new team members, regardless of the role, we are always looking for specific traits as outlined in our values. Our entire process and all the questions that you will be asked are linked to them. We are looking to see if you and us, stand for the same."
+             }
+           }, {
+             "@type": "Question",
+             "name": "How am I going to apply?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "Head to our career page to see all current openings <a href=https://jobs.nimblehq.co/> Click here </a>"
+             }
+           }]
+         }
+
   return (
     <body className="introduction introduction__compass-introduction">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqHeader) }}
+        />;
+      </Head>
       <div hidden="">
       </div>
       <header className="app-header">
