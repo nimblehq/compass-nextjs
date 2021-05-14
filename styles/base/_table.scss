@@ -1,0 +1,36 @@
+table {
+  width: 100%;
+  margin: $spacer 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+
+  @include media-breakpoint-up('xl') {
+    width: calc(100% + #{$grid-gutter-width * 2});
+    margin: $spacer -#{$grid-gutter-width};
+  }
+
+  thead, tbody {
+    border: 1px solid map-get($color-gray, 'primary');
+  }
+
+  th {
+    @include text-truncate();
+
+    padding: $spacer;
+    font-weight: 600;
+    text-align: left;
+    background: map-get($color-gray, 'light');
+  }
+
+  td {
+    border-bottom: 1px solid map-get($color-gray, 'primary');
+    padding: $spacer/2 $spacer;
+  }
+
+  tr,
+  td,
+  th {
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,107 @@
+.list-block {
+  --item-height: 5.5rem;
+  --link-left-spacing: 2rem;
+  --link-right-spacing: 4rem;
+  
+  padding: 0;
+  margin: 1rem 0;
+  list-style: none;
+
+  @include media-breakpoint-up('sm') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  &,
+  // Override default style for bullet point list
+  &:last-child {
+    margin: 1rem 0;
+
+    @include media-breakpoint-up('lg') {
+      margin: 2rem 0;
+    }
+  }
+
+  &__item {
+    height: var(--item-height);
+
+    background: map-get($color-gray, 'light');
+    transition: background-color $base-animation-duration $base-animation-timing;
+
+    &:hover {
+      background: map-get($color-gray, 'primary');
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+
+      @include media-breakpoint-up('sm') {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    font-size: map-get($font-sizes, 'default');
+    font-weight: bold;
+    text-indent: var(--link-left-spacing);
+
+    &, &:hover {
+      text-decoration: none;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 100%;
+
+      background: {
+        repeat: no-repeat;
+        position: center center;
+      }
+    }
+
+    &:before {
+      left: 0;
+
+      width: var(--link-left-spacing);
+
+      background-size: 2.5rem 2.5rem
+    }
+
+    &:after {
+      right: 0;
+
+      width: var(--link-right-spacing);
+
+      background: {
+        image: image-url('shared/icons/icon-arrow-tail.svg');
+        size: 1rem 1rem;
+      }
+    }
+  }
+}
+
+.list-block--iconized {
+  --item-height: 7.5rem;
+  --link-left-spacing: 5.25rem;
+
+  .list-block__link {
+    font-size: map-get($font-sizes, 'xl');
+  }
+}

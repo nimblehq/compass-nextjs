@@ -1,0 +1,97 @@
+body {
+  color: $base-font-color;
+  font-size: map-get($font-sizes, 'md');
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+
+  @include media-breakpoint-up('lg') {
+    font-size: $base-font-size;
+  }
+}
+
+::-moz-selection {
+  color: #fff;
+  background: map-get($color-brand, 'light');
+}
+
+::selection {
+  color: #fff;
+  background: map-get($color-brand, 'lighter');
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h4, h5, h6 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: map-get($heading-sizes, 'h1');
+}
+
+h2 {
+  font-size: map-get($heading-sizes, 'h2');
+}
+
+h3 {
+  font-size: map-get($heading-sizes, 'h3');
+}
+
+h4 {
+  font-size: map-get($heading-sizes, 'h4');
+}
+
+h5 {
+  font-size: map-get($heading-sizes, 'h5');
+}
+
+h6 {
+  font-size: map-get($heading-sizes, 'h6');
+}
+
+hr {
+  border-bottom: 1px solid map-get($color-gray, 'primary');
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $spacer * 2 0;
+}
+
+pre {
+  overflow: auto;
+  padding: $spacer / 2;
+
+  font-size: map-get($font-sizes, 'md');
+
+  background: map-get($color-gray, 'light');
+  border-radius: $border-radius;
+}
+
+blockquote {
+  padding: 0 ($spacer / 2) 0 $spacer;
+  position: relative;
+  font-style: italic;
+
+  &:before {
+    content: '';
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: map-get($color-red, 'primary');
+  }
+
+  p:last-of-type {
+    margin: 0;
+  }
+
+  cite {
+    display: block;
+    margin-top: $spacer / 2;
+    font-style: normal;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,10 @@
+ul, ol {
+  list-style-position: outside;
+  padding-left: 1.125rem;
+}
+
+ul, ol, dl {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

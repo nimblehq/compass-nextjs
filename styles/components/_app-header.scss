@@ -1,0 +1,11 @@
+.app-header {
+  height: $app-header-height;
+  padding: $grid-gutter-width/2 $grid-gutter-width/2 0;
+  z-index: map-get($zIndex, 'higher');
+  background: #fff;
+  border-bottom: 1px solid map-get($color-gray, 'primary');
+}
+
+.app-header .logo {
+  height: 2rem;
+}

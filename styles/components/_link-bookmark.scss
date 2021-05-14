@@ -1,0 +1,55 @@
+.link-bookmark {
+  $icon-area: 4rem;
+
+  position: relative;
+
+  display: block;
+  padding: 1rem $icon-area;
+
+  font-weight: bold;
+  text-decoration: none;
+
+  border: 1px solid map-get($color-brand, 'dark');
+  border-radius: rem(4px);
+
+  @include media-breakpoint-up('sm') {
+    line-height: 1;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: $icon-area;
+    height: 100%;
+
+    text-align: center;
+  }
+
+  &:before {
+    content: '👉';
+
+    left: 0;
+  }
+
+  &:after {
+    content: '';
+    right: 0;
+
+    background: {
+      image: image-url('shared/icons/icon-arrow-tail.svg');
+      repeat: no-repeat;
+      size: 1rem 1rem;
+      position: center center;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

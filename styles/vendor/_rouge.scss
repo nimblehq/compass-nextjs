@@ -1,0 +1,10 @@
+code.highlighter-rouge {
+  padding: 0 4px 2px;
+  background-color: map-get($color-gray, 'light');
+  border-radius: $border-radius;
+}
+
+code.highlight {
+  display: block;
+  font-size: map-get($font-sizes, 'sm');
+}
