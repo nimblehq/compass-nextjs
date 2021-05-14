@@ -27,7 +27,7 @@ export default function Sidebar() {
           <div className="app-navigation__content">
             <ul className="app-navigation__list">
               <li className="app-navigation__list-item">
-                <a href="/compass/intro/contribute/" className="app-navigation__link link--unstyled">
+                <a href="/contribute/" className="app-navigation__link link--unstyled">
                   Contribute
                 </a>
               </li>
