@@ -45,6 +45,8 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqHeader) }}
         />;
+        <title>Compass Introduction | Compass by Nimble</title>
+        <meta name="description" content="Compass is a living document guiding our team members to work together and fulfill our mission."></meta>
       </Head>
       <div hidden="">
       </div>
