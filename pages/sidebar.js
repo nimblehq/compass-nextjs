@@ -32,7 +32,7 @@ export default function Sidebar() {
   
   
   <li className="app-navigation__list-item">
-    <a href="/compass/intro/contribute/" className="app-navigation__link link--unstyled">
+    <a href="/contribute" className="app-navigation__link link--unstyled">
       Contribute
     </a>
   </li>
