@@ -1,8 +1,9 @@
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
 
 const Sidebar = dynamic(() => import('./sidebar'))
 
-export default function Home() {
+export default function Contribute() {
   return (
     <div>
       <Head>
